@@ -1,0 +1,7 @@
+{
+  "name": "moodle-student",
+  "version": "0.2.0",
+  "description": "Michlala Jerusalem student assistant: scan Moodle for overdue/upcoming/open assignments, build a Hebrew status page with links and lecturers, brief any assignment, sync deadlines to Google Calendar, and read the student portal (grades, attendance, timetable) — via Claude in Chrome or a local CLI. Personal data is kept in a profile file on your own computer.",
+  "author": { "name": "mtech-ai1" },
+  "keywords": ["moodle", "michlala", "student", "assignments", "deadlines", "hebrew"]
+}

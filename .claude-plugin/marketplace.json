@@ -1,0 +1,15 @@
+{
+  "name": "mtech-family",
+  "owner": { "name": "mtech-ai1" },
+  "metadata": {
+    "description": "Everyday Claude skills for family and friends."
+  },
+  "plugins": [
+    {
+      "name": "moodle-student",
+      "source": "./plugins/moodle-student",
+      "description": "Michlala Jerusalem student assistant: what's due in Moodle, a Hebrew status page, assignment briefs, calendar sync, grades and attendance.",
+      "category": "education"
+    }
+  ]
+}
