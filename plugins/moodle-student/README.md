@@ -10,9 +10,11 @@ A student assistant for **מכללה ירושלים**. It works with Moodle (moo
 | `moodle-assignment-brief` | Deep dive into one assignment: requirements, rubric, the lecturer's AI rules, blockers, a back-scheduled work plan, and feedback on your own drafts. |
 | `moodle-deadlines-to-calendar` | Add deadlines and milestones to Google Calendar, with no duplicates (or an .ics file). |
 | `michlala-portal` | Portal data: courses, credits, attendance %, final grades, timetable, exams. |
+| `michlala-assistant` | Everything above through the **Michlala connector**: no browser extension and no terminal. Works on the free plan. Self-contained, so it can also be uploaded on its own as a skill. |
 | `michlala-cli` | Local CLI: log in once in a real browser, then scan, query the portal and build the report headless. |
 
-## Two ways to access the sites
+## Three ways to access the sites
+0. **Michlala connector** (any Claude app, any plan). A private server reads Moodle and the portal with a session you create by running the small `michlala-login` program on your computer and signing in yourself. The person who set this up for you gives you the program, its settings file and the connector address. When the session ends, run the program again.
 1. **Claude in Chrome** (default, no setup). Claude works in your logged-in Chrome tab and runs `skills/moodle-scan/scripts/moodle-scan.js` inside the Moodle page.
 2. **Local CLI** (your computer, with a terminal):
    ```bash

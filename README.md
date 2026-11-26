@@ -28,6 +28,12 @@ To update: on the same Plugins screen, refresh the marketplace and update the pl
 
 In Claude Code: `/plugin marketplace add mtech-ai1/mtech-family-marketplace`, then `/plugin install moodle-student@mtech-family`.
 
+## בלי מנוי (Claude חינמי) / On the free plan
+
+בתוכנית החינמית אין תוספים, אבל אפשר להעלות כישורים ידנית: מורידים קובץ ZIP של הכישור מ-[Releases](https://github.com/mtech-ai1/mtech-family-marketplace/releases), ואז ב-Claude: **Customize** ← **Skills** ← העלאה. לעדכון מורידים את הגרסה החדשה ומעלים שוב.
+
+The free plan has no plugins, but skills can be uploaded by hand: download a skill's ZIP from [Releases](https://github.com/mtech-ai1/mtech-family-marketplace/releases), then in Claude go to **Customize** → **Skills** and upload it. To update, download the new version and upload again.
+
 ## Plugins
 
 | Plugin | What it does |
@@ -43,5 +49,6 @@ Plugins here never contain anyone's personal details. A plugin that needs to rem
 - Each plugin lives in `plugins/<name>/` with `.claude-plugin/plugin.json` and `skills/<skill>/SKILL.md`.
 - To add a skill: create `plugins/<plugin>/skills/<skill>/SKILL.md`. To add a plugin: create its folder and add an entry to `.claude-plugin/marketplace.json`.
 - **Bump `version` in the plugin's `plugin.json` on every change.** People only receive an update when the version string changes.
+- Every new plugin version is released automatically with one ZIP per skill (`scripts/build-skill-zips.sh`). A skill meant for hand upload must be self-contained: no references to files in other skills.
 - Before pushing: `python3 scripts/check.py --base origin/main` and `claude plugin validate .`
 - This repository is public. Never commit names, course lists, tokens or any other personal data.

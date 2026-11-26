@@ -1,0 +1,28 @@
+name: release
+# Publishes one ZIP per skill for each new plugin version, for people who upload skills by hand.
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  zips:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        run: python3 scripts/check.py
+      - name: Build skill ZIPs
+        run: scripts/build-skill-zips.sh
+      - name: Release new plugin versions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for manifest in plugins/*/.claude-plugin/plugin.json; do
+            name=$(basename "$(dirname "$(dirname "$manifest")")")
+            version=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["version"])' "$manifest")
+            tag="$name-v$version"
+            if gh release view "$tag" >/dev/null 2>&1; then echo "$tag exists"; continue; fi
+            gh release create "$tag" dist/"$name"-*-"$version".zip --title "$name $version" \
+              --notes "Skill ZIPs for uploading by hand under Customize > Skills. Plugin users get this version through the marketplace."
+          done

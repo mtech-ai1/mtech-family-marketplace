@@ -5,6 +5,8 @@ description: Opens a single Moodle assignment or quiz and turns it into a practi
 
 # Assignment brief
 
+**Connector first:** if tools named `michlala_…` are available in this chat, use the `michlala-assistant` skill instead. It needs no browser and no terminal.
+
 **Personal profile:** read `~/.moodle-student/profile.md` first if it exists (Windows: `%USERPROFILE%\.moodle-student\profile.md`). It holds this student's courses, known activity ids, preferences and notes. Rules for reading and updating it are in `../moodle-scan/references/personal-profile.md`.
 
 The goal is to help the student understand and plan the work: requirements, a plan, structure and feedback on their own drafts. **Do not write a submission for them to hand in as their own.** Many lecturers forbid it, and some require the pre-AI draft to be submitted. Respect the lecturer's stated AI policy above everything else.

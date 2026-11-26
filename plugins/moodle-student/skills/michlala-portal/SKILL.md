@@ -5,6 +5,8 @@ description: Reads the Michlala Jerusalem student portal "אזור אישי" (me
 
 # Student portal (מידע)
 
+**Connector first:** if tools named `michlala_…` are available in this chat, use the `michlala-assistant` skill instead. It needs no browser and no terminal.
+
 **Personal profile:** read `~/.moodle-student/profile.md` first if it exists (Windows: `%USERPROFILE%\.moodle-student\profile.md`). It holds this student's courses, known activity ids, preferences and notes. Rules for reading and updating it are in `../moodle-scan/references/personal-profile.md`.
 
 ## Access paths
