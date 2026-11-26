@@ -5,6 +5,8 @@ description: Command-line access to Michlala Jerusalem's Moodle and student port
 
 # michlala CLI
 
+**Connector first:** if tools named `michlala_…` are available in this chat, use the `michlala-assistant` skill instead. It needs no browser and no terminal.
+
 Script: `scripts/michlala.py` (Python 3.9+, Playwright). It only reads: it never submits, posts, pays or changes anything.
 
 ## When to use it, and when not to

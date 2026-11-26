@@ -5,6 +5,8 @@ description: Scans the logged-in Moodle of מכללה ירושלים (moodle4.mi
 
 # Moodle scan
 
+**Connector first:** if tools named `michlala_…` are available in this chat, use the `michlala-assistant` skill instead. It needs no browser and no terminal.
+
 Collect the current state of every course in one pass. This scan is the data source for the other skills (`moodle-status-report`, `moodle-assignment-brief`, `moodle-deadlines-to-calendar`). Never submit, post, enroll or change anything on the site. This skill only reads.
 
 Site facts and known quirks are in `references/site-profile.md`. Read it first. Generic Moodle endpoints and selectors are in `references/moodle-endpoints.md`.
